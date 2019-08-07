@@ -41,7 +41,7 @@ $(
      */
     describe("The menu", () => {
       it("menu element hidden by default", () => {
-        expect(document.body.className).toBe("menu-hidden");
+        expect($("body").hasClass("menu-hidden")).toEqual(true);
       });
 
       it("visibility menu onClick", () => {
@@ -71,7 +71,7 @@ $(
       it("single entry element,whithin feed container", () => {
         const feed = document.querySelector(".feed");
         const entries = document.querySelector(".entry");
-        expect(feed, entries).toBeDefined();
+        expect(feed.length !== 0 && entries.length !== 0).toBe(true);
       });
     });
 
